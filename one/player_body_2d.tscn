@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://hq6gs51dtghs"]
+
+[ext_resource type="Script" path="res://one/player_body_2d.gd" id="1_2drgo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ipdsk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lkf8w"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_2drgo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ipdsk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
+sprite_frames = SubResource("SpriteFrames_lkf8w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CollisionShape2D/AnimatedSprite2D"]
