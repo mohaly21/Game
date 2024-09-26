@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://cgi0u28jahrgb"]
+
+[ext_resource type="Texture2D" uid="uid://b3ltumxjr1ayj" path="res://Sprites/flag animation.png" id="1_b1anq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlqqc"]
+atlas = ExtResource("1_b1anq")
+region = Rect2(0, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2qw1"]
+atlas = ExtResource("1_b1anq")
+region = Rect2(60, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j44uq"]
+atlas = ExtResource("1_b1anq")
+region = Rect2(120, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ks7v5"]
+atlas = ExtResource("1_b1anq")
+region = Rect2(180, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkd2a"]
+atlas = ExtResource("1_b1anq")
+region = Rect2(240, 0, 60, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_do6co"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlqqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2qw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j44uq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ks7v5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkd2a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q1h46"]
+size = Vector2(20, 50)
+
+[node name="Flag" type="AnimatedSprite2D"]
+position = Vector2(21, 0)
+sprite_frames = SubResource("SpriteFrames_do6co")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-21, 3)
+shape = SubResource("RectangleShape2D_q1h46")
