@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bsu4sgttvaq64"]
+[gd_scene load_steps=12 format=3 uid="uid://bsu4sgttvaq64"]
 
 [ext_resource type="PackedScene" uid="uid://cgm5m4pxp8uft" path="res://one/player.tscn" id="1_gjyjp"]
 [ext_resource type="Texture2D" uid="uid://7tohnxlcm3xe" path="res://Sprites/Background/tileset.png" id="2_mrhld"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c10yb0dry5lqp" path="res://Sprites/Background/back.png" id="4_do57b"]
 [ext_resource type="Texture2D" uid="uid://l6cynk386lrj" path="res://Sprites/Background/middle.png" id="5_yf5l6"]
 [ext_resource type="PackedScene" uid="uid://3pup5po47u4y" path="res://kill_zone.tscn" id="6_1toyh"]
+[ext_resource type="PackedScene" uid="uid://cgi0u28jahrgb" path="res://flag.tscn" id="7_kvuhr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_igio3"]
 texture = ExtResource("2_x4t53")
@@ -515,3 +516,6 @@ stretch_mode = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
 position = Vector2(0, 303)
 shape = SubResource("WorldBoundaryShape2D_jsi7f")
+
+[node name="Flag" parent="." instance=ExtResource("7_kvuhr")]
+position = Vector2(432, 179)

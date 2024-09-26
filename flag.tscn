@@ -51,6 +51,8 @@ size = Vector2(20, 50)
 [node name="Flag" type="AnimatedSprite2D"]
 position = Vector2(21, 0)
 sprite_frames = SubResource("SpriteFrames_do6co")
+autoplay = "default"
+frame_progress = 0.829292
 
 [node name="Area2D" type="Area2D" parent="."]
 
