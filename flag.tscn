@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgi0u28jahrgb"]
+[gd_scene load_steps=10 format=3 uid="uid://cgi0u28jahrgb"]
 
 [ext_resource type="Texture2D" uid="uid://b3ltumxjr1ayj" path="res://Sprites/flag animation.png" id="1_b1anq"]
+[ext_resource type="Script" path="res://flag.gd" id="2_txl56"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rlqqc"]
 atlas = ExtResource("1_b1anq")
@@ -52,10 +53,13 @@ size = Vector2(20, 50)
 position = Vector2(21, 0)
 sprite_frames = SubResource("SpriteFrames_do6co")
 autoplay = "default"
-frame_progress = 0.829292
+frame_progress = 0.544865
+script = ExtResource("2_txl56")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-21, 3)
 shape = SubResource("RectangleShape2D_q1h46")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -518,4 +518,4 @@ position = Vector2(0, 303)
 shape = SubResource("WorldBoundaryShape2D_jsi7f")
 
 [node name="Flag" parent="." instance=ExtResource("7_kvuhr")]
-position = Vector2(432, 179)
+position = Vector2(3645, -171)
